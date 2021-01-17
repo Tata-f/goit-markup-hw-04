@@ -176,6 +176,10 @@ img {
 /* стилизация героя */
 
 .hero {
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--background-color);
@@ -185,7 +189,6 @@ img {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/команда.jpg);
-  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -295,13 +298,14 @@ img {
   text-align: center;
 }
 
-.our-team li + li {
+.our-team .cards + .cards {
   margin-left: 30px;
 }
 
-.our-team .cards {
+.our-team .cards-title {
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: var(--secondary-text-color);
 }
 
 .names {
@@ -317,18 +321,91 @@ img {
 
 .professions {
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 16px;
 
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
 
-/* .our-team li {
+.icons-networks {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.networks-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.networks-link:hover,
+.networks-link:focus {
+  background-color: var(--accent-color);
+}
+
+.icons-networks svg {
+  fill: #afb1b8;
+}
+
+.networks-link:hover svg,
+.networks-link:focus svg {
+  fill: var(--secondary-text-color);
+}
+
+.our-team .cards {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 1);
   border-radius: 0px 0px 4px 4px;
-} */
+}
+
+/* постоянные клиенты */
+
+.our-clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients {
+  display: flex;
+  justify-content: space-between;
+  width: 1170px;
+}
+
+.clients .li {
+  display: flex;
+}
+
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-link svg {
+  fill: #afb1b8;
+}
+
+.clients-link:hover svg,
+.clients-link:focus svg {
+  fill: var(--accent-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
+}
 
 /* портфолио */
 
@@ -369,6 +446,9 @@ li button:hover,
 li button:focus {
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .portfolio-section .cards {
@@ -427,6 +507,45 @@ li button:focus {
   background-color: var(--background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 70px;
+  padding-left: 0;
+  padding: 0;
+}
+
+.footer-right {
+  display: flex;
+  width: 206px;
+  flex-direction: column;
+  padding-left: 0;
+  padding: 0;
+}
+
+.footer-right .title {
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+
+.footer-link-bgc {
+  color: var(--secondary-text-color);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer .logo {
