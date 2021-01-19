@@ -38,6 +38,8 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* стилизация header */
 
@@ -83,14 +85,10 @@ img {
   margin-right: 10px;
 }
 
-.header .contacts a:hover .icon,
-.header .contacts a:focus .icon {
-  fill: var(--accent-color);
-}
-
 .header .contacts a:hover,
 .header .contacts a:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .header .contacts a {
@@ -307,6 +305,8 @@ img {
 .our-team .cards-title {
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
   background-color: var(--secondary-text-color);
 }
 
@@ -334,8 +334,8 @@ img {
   display: flex;
   justify-content: space-between;
   width: 206px;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 .networks-link {
